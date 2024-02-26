@@ -1,11 +1,11 @@
 terraform {
   backend "local" {
-    path = "/home/jenkins/tfstate/terraform.tfstate"
+    path = "/home/ubuntu/tfstate/terraform.tfstate"
   }
   required_providers {
     confluent = {
       source  = "confluentinc/confluent"
-      version = "1.38.0"
+      version = "1.62.0"
     }
   }
 }
