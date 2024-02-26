@@ -1,5 +1,5 @@
 terraform {
-  
+
   required_providers {
     confluent = {
       source  = "confluentinc/confluent"
@@ -30,7 +30,7 @@ resource "confluent_kafka_cluster" "dedicated" {
     cku = 2
   }
   environment {
-    id = data.confluent_environment.data.id
+    id = data.confluent_environment.demo.id
   }
 }
 
@@ -63,7 +63,7 @@ resource "confluent_api_key" "cool-manager-kafka-api-key" {
     kind        = confluent_kafka_cluster.dedicated.kind
 
     environment {
-      id = data.confluent_environment.data.id
+      id = data.confluent_environment.demo.id
     }
   }
 
@@ -107,7 +107,7 @@ resource "confluent_api_key" "cool-consumer-kafka-api-key" {
     kind        = confluent_kafka_cluster.dedicated.kind
 
     environment {
-      id = data.confluent_environment.data.id
+      id = data.confluent_environment.demo.id
     }
   }
 }
@@ -135,7 +135,7 @@ resource "confluent_api_key" "cool-producer-kafka-api-key" {
     kind        = confluent_kafka_cluster.dedicated.kind
 
     environment {
-      id = data.confluent_environment.data.id
+      id = data.confluent_environment.demo.id
     }
   }
 }
