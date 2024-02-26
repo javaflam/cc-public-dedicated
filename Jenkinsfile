@@ -13,7 +13,7 @@ pipeline {
         stage('Init') {
             steps {
                 sh '''
-                terraform init -no-color
+                terraform init -no-color -migrate-state
                 '''
             }
         }
