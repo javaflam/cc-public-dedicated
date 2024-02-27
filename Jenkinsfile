@@ -25,7 +25,7 @@ pipeline {
                 '''
             }
         }
-
+/*
         stage('Confirmation') {
             steps {
                 input 'Do you want to destory the resources?'
@@ -39,8 +39,8 @@ pipeline {
                 '''
             }
         }
+*/
 
-/*
         stage('Confirmation') {
             steps {
                 input 'Do you want to apply the changes?'
@@ -54,6 +54,6 @@ pipeline {
                 '''
             }
         }
-*/
+
     }
 }
